@@ -34,3 +34,15 @@ The proposed research method combines a literature review with prototype evaluat
 - Download appointment summaries in JSON format.
 - Ask the assistant about registration, documents, departments, and appointments.
 - Use English or Thai patient navigation and administrative responses.
+
+### Staff Dashboard
+
+- View registration and appointment summaries.
+- Review patient registrations and record administrative notes.
+- Mark registrations as pending, reviewed, or requiring changes.
+- Manage doctor details and availability.
+- Close or reopen appointment slots.
+- Check in patients and mark visits as completed.
+- Create and edit knowledge graph entities and relationships.
+- Review server activity and export structured information.
+
