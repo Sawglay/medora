@@ -9,3 +9,13 @@ The project includes a **patient portal**, a **staff dashboard**, and a **server
 ## Demo
 
 The hosted demo is private and requires an authorized ChatGPT account. Adding this link to a public GitHub repository does not make the demo publicly accessible.
+
+## Project Objective
+
+Hospital registration and appointment processes often involve repeated questions, incomplete forms, and information spread across different systems. Medora brings these administrative tasks into one website.
+
+The project investigates the following research question:
+
+> Can combining conversational understanding with structured hospital information provide more reliable administrative assistance than a standalone chatbot?
+
+The proposed research method combines a literature review with prototype evaluation. Comparative model results have not yet been collected.
