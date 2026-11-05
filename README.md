@@ -19,3 +19,18 @@ The project investigates the following research question:
 > Can combining conversational understanding with structured hospital information provide more reliable administrative assistance than a standalone chatbot?
 
 The proposed research method combines a literature review with prototype evaluation. Comparative model results have not yet been collected.
+
+## Key Features
+
+### Patient Portal
+
+- Create and edit a patient registration profile.
+- Validate required details and request consent before saving.
+- Prepare a checklist of identification, insurance, referral, and guardian documents.
+- Search fictional doctors and filter by department.
+- View available appointment slots for the next 14 days.
+- Review and confirm appointment details before booking.
+- Reschedule or cancel confirmed appointments.
+- Download appointment summaries in JSON format.
+- Ask the assistant about registration, documents, departments, and appointments.
+- Use English or Thai patient navigation and administrative responses.
