@@ -5,3 +5,7 @@ Medora is an academic web application that helps patients prepare registration f
 The project includes a **patient portal**, a **staff dashboard**, and a **server-side API with persistent storage**.
 
 > **Prototype status:** The current application uses fictional hospital data. Graph-backed guided chat is available. Live GPT responses require a server-side OpenAI API key. The prototype does not provide medical diagnosis or treatment advice.
+
+## Demo
+
+The hosted demo is private and requires an authorized ChatGPT account. Adding this link to a public GitHub repository does not make the demo publicly accessible.
