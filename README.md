@@ -46,3 +46,13 @@ The proposed research method combines a literature review with prototype evaluat
 - Create and edit knowledge graph entities and relationships.
 - Review server activity and export structured information.
 
+### Server Features
+
+- Server-side input validation using Zod.
+- Persistent patient, doctor, appointment, and graph records.
+- Account-scoped queries to isolate each owner's demo workspace.
+- A database uniqueness constraint to prevent duplicate active bookings.
+- Atomic rescheduling that preserves the original booking if the new slot conflicts.
+- Server-side GPT integration with a labelled guided fallback.
+- Audit records for administrative changes.
+
