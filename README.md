@@ -56,3 +56,16 @@ The proposed research method combines a literature review with prototype evaluat
 - Server-side GPT integration with a labelled guided fallback.
 - Audit records for administrative changes.
 
+## Technology Stack
+
+| Layer | Current implementation |
+| --- | --- |
+| Frontend | React, TypeScript, CSS, Lucide icons |
+| Application framework | Vinext with Vite |
+| Backend | TypeScript API routes on Cloudflare Workers |
+| Database | Cloudflare D1, a managed SQLite database |
+| Schema and migrations | Drizzle ORM tooling and SQL migrations |
+| Validation | Zod |
+| Knowledge graph | Persistent node and edge tables with two-hop retrieval |
+| LLM integration | OpenAI API; default configured model: `gpt-4.1-mini` |
+| Hosted authentication | Sign in with ChatGPT |
