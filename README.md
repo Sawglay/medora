@@ -118,3 +118,14 @@ For example, a doctor **works in** Dental Care, which **provides** a consultatio
 
 Retrieval follows connected relationships for up to two hops and supplies relevant facts to the assistant. The current implementation uses D1 tables, not a separate Neo4j server.
 
+## Dataset
+
+The current version seeds **15 fictional doctors across five departments**:
+
+- General Medicine
+- Dental Care
+- Dermatology
+- Cardiology
+- Pediatrics
+
+It also includes fictional fees, locations, administrative policies, document requirements, and graph relationships. Patient profiles and appointments are created during testing.
