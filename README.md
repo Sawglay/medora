@@ -129,3 +129,23 @@ The current version seeds **15 fictional doctors across five departments**:
 - Pediatrics
 
 It also includes fictional fees, locations, administrative policies, document requirements, and graph relationships. Patient profiles and appointments are created during testing.
+
+
+**No Kaggle dataset or real patient dataset is currently included.** If an external dataset is added for the assignment, document its source URL, license, selected fields, cleaning steps, and any anonymization. Synthetic appointment and registration examples should remain clearly labelled.
+
+## Project Structure
+
+| Path | Purpose |
+| --- | --- |
+| `app/page.tsx` | Patient portal, staff dashboard, and chat interface |
+| `app/globals.css` | Application styling and responsive layout |
+| `app/api/medora/route.ts` | API actions, validation, and authorization checks |
+| `app/chatgpt-auth.ts` | Hosted identity handling |
+| `lib/domain.ts` | Shared validation, time slots, graph search, and field extraction |
+| `lib/server.ts` | Database operations, demo seeding, and chatbot integration |
+| `db/schema.ts` | Database schema |
+| `drizzle/` | SQL migrations |
+| `worker/index.ts` | Worker entry point |
+| `tests/` | API/database integration tests and test adapters |
+| `.env.example` | Optional environment variable names without credentials |
+
