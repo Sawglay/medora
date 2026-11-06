@@ -69,3 +69,21 @@ The proposed research method combines a literature review with prototype evaluat
 | Knowledge graph | Persistent node and edge tables with two-hop retrieval |
 | LLM integration | OpenAI API; default configured model: `gpt-4.1-mini` |
 | Hosted authentication | Sign in with ChatGPT |
+
+**Architecture note:** Python/FastAPI, PostgreSQL, and Neo4j were discussed in the original proposal. The current hosted prototype uses TypeScript and D1 instead. A migration to those services is future work; they are not dependencies of this version.
+
+## System Workflow
+
+```mermaid
+flowchart TD
+    U["Patient request"] --> C["Chat interface"]
+    C --> A["Server-side assistant"]
+    A --> K["Knowledge graph retrieval"]
+    K --> M["GPT or guided response"]
+    M --> R["Patient reviews form or appointment"]
+    R --> V["Server validation and confirmation"]
+    V --> D["Persistent database"]
+    S["Staff dashboard"] --> V
+    D --> C
+    D --> S
+```
