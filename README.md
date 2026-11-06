@@ -87,3 +87,34 @@ flowchart TD
     D --> C
     D --> S
 ```
+
+
+1. The patient describes an administrative need in the chatbot or opens a form directly.
+2. The assistant retrieves relevant graph facts and can extract basic registration fields from the message.
+3. If GPT is configured, the server sends the conversation and selected graph context to the model. Otherwise, guided responses remain available.
+4. The patient opens the appropriate screen and reviews the details.
+5. The server validates the request and saves the confirmed action.
+6. The saved registration or appointment becomes available in the staff view.
+
+The chatbot does not directly create, change, or cancel appointments. These actions require confirmation through the application.
+
+## Knowledge Graph
+
+The graph connects administrative entities such as:
+
+| Entity | Example |
+| --- | --- |
+| Doctor | A fictional doctor assigned to a department |
+| Department | Dental Care |
+| Service | Dental consultation |
+| Form | Patient registration |
+| Document | Photo ID or passport |
+| Location | A department's floor and wing |
+| Policy | Opening hours |
+
+Supported relationships include `WORKS_IN`, `PROVIDES`, `REQUIRES`, `MAY_REQUIRE`, `LOCATED_AT`, and `RELATED_TO`.
+
+For example, a doctor **works in** Dental Care, which **provides** a consultation service. That service **requires** registration, and registration **requires** identification.
+
+Retrieval follows connected relationships for up to two hops and supplies relevant facts to the assistant. The current implementation uses D1 tables, not a separate Neo4j server.
+
