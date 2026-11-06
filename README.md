@@ -149,3 +149,14 @@ It also includes fictional fees, locations, administrative policies, document re
 | `tests/` | API/database integration tests and test adapters |
 | `.env.example` | Optional environment variable names without credentials |
 
+## Getting Started
+
+These instructions apply to the generated Medora source project. A README alone does not contain the application code.
+
+### Prerequisites
+
+- Node.js 24 recommended; the application requires Node.js 22.13 or newer.
+- The pnpm version specified in `package.json`.
+- The complete application source, including migrations and runtime scripts.
+- A Cloudflare Workers/D1-compatible environment for the current backend.
+- An OpenAI API key only if live GPT responses are needed.
