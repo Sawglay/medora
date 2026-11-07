@@ -182,3 +182,10 @@ pnpm test
 pnpm build
 ```
 
+### Initialize the local database
+
+After the build generates the Worker configuration, apply the included migration:
+
+```bash
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_amusing_blacklash.sql
+```
