@@ -160,3 +160,11 @@ These instructions apply to the generated Medora source project. A README alone 
 - The complete application source, including migrations and runtime scripts.
 - A Cloudflare Workers/D1-compatible environment for the current backend.
 - An OpenAI API key only if live GPT responses are needed.
+
+### Install dependencies
+
+From the repository root:
+
+```bash
+pnpm install
+```
