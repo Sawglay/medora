@@ -168,3 +168,17 @@ From the repository root:
 ```bash
 pnpm install
 ```
+
+### Run checks
+
+```bash
+node node_modules/typescript/bin/tsc --noEmit
+pnpm test
+```
+
+### Build
+
+```bash
+pnpm build
+```
+
