@@ -200,3 +200,25 @@ Use the local address printed by the runtime.
 
 **Local authentication limitation:** The hosted version receives trusted identity headers from its authentication gateway. A normal local browser session does not receive those headers, so authenticated data requests will return `401` until local authentication is deliberately configured. The application does not include an authentication bypass. Automated integration tests use synthetic identities in a separate test harness.
 
+
+## GPT Configuration
+
+Configure these values in the server runtime's secret/environment settings:
+
+```dotenv
+OPENAI_API_KEY=your_server_side_api_key
+OPENAI_MODEL=gpt-4.1-mini
+```
+
+Never commit a real key or expose it in frontend code. Do not use a `NEXT_PUBLIC_` variable for credentials.
+
+| Mode | Behavior |
+| --- | --- |
+| Guided mode | Uses rules and retrieved graph facts without calling GPT |
+| GPT mode | Uses the configured model with retrieved administrative context |
+| Guided fallback | Returns a labelled guided answer if the provider request fails |
+
+When GPT is connected, chat messages and selected graph facts are sent to OpenAI. Patient database rows are not automatically included in model context. Chat history is held in the browser session rather than stored as a conversation database.
+
+Live-model behavior still needs to be tested after the API connection is configured.
+
