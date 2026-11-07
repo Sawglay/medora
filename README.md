@@ -254,3 +254,32 @@ For the AI assignment, a planned evaluation should compare the same LLM and ques
 | Usability | Feedback from users completing representative scenarios |
 
 Include English and Thai questions, missing-information cases, unavailable appointment slots, and conflicting requests. Report measured results rather than assuming the graph improves every answer.
+
+## Scope and Limitations
+
+- The Patient/Staff switch demonstrates both workflows for one authenticated workspace owner. It is not production role-based access control.
+- All hospital information is fictional and intended for academic testing.
+- Document handling is a checklist; scans and file uploads are not implemented.
+- There is no real hospital booking integration, payment processing, or email/SMS delivery.
+- Appointment dates and times use `Asia/Bangkok`.
+- Some staff controls remain English.
+- Diagnosis, prescriptions, clinical triage, and insurance eligibility decisions are outside the project scope.
+
+## Roadmap
+
+- [x] Patient and staff views
+- [x] Persistent registration and appointment workflows
+- [x] Booking conflict prevention and confirmation
+- [x] Editable knowledge graph and graph-backed retrieval
+- [x] Guided chat and server-side GPT integration code
+- [ ] Configure and evaluate live GPT responses
+- [ ] Complete the literature review and comparative AI evaluation
+- [ ] Add a documented external dataset if required by the assignment
+- [ ] Implement separate patient and staff authorization for a multi-user deployment
+- [ ] Expand bilingual coverage and accessibility testing
+- [ ] Consider FastAPI, PostgreSQL, and Neo4j if required by the final architecture
+
+## License
+
+No open-source license has been selected for this project. Add a `LICENSE` file before granting reuse permissions.
+
