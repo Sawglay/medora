@@ -189,3 +189,14 @@ After the build generates the Worker configuration, apply the included migration
 ```bash
 node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_amusing_blacklash.sql
 ```
+
+### Start the local built application
+
+```bash
+pnpm start
+```
+
+Use the local address printed by the runtime.
+
+**Local authentication limitation:** The hosted version receives trusted identity headers from its authentication gateway. A normal local browser session does not receive those headers, so authenticated data requests will return `401` until local authentication is deliberately configured. The application does not include an authentication bypass. Automated integration tests use synthetic identities in a separate test harness.
+
