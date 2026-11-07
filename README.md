@@ -222,3 +222,35 @@ When GPT is connected, chat messages and selected graph facts are sent to OpenAI
 
 Live-model behavior still needs to be tested after the API connection is configured.
 
+
+## API Overview
+
+The application uses a single server route:
+
+| Method | Endpoint | Purpose |
+| --- | --- | --- |
+| `GET` | `/api/medora` | Retrieve the authenticated owner's workspace state |
+| `POST` | `/api/medora` | Execute an action specified by the JSON `action` field |
+
+Supported actions include `chat`, `patient`, `review`, `book`, `reschedule`, `appointmentStatus`, `doctor`, `slot`, `node`, `edge`, `deleteEdge`, and `sample`.
+
+Booking and appointment status changes require explicit confirmation. Server validation remains authoritative even when the interface has already checked the input.
+
+## Testing and Evaluation
+
+The initial implementation passed **31 API/database checks** covering authentication, input validation, consent, duplicate bookings, reschedule conflicts, cancellation, closed slots, staff review, graph retrieval, Thai responses, field extraction, and workspace isolation.
+
+These tests execute the actual route handlers with an in-memory SQLite adapter and synthetic identity headers. They do not validate the live OpenAI provider or the production authentication gateway. Rerun the tests after changing the application.
+
+For the AI assignment, a planned evaluation should compare the same LLM and question set with and without graph context:
+
+| Metric | What to measure |
+| --- | --- |
+| Answer accuracy | Correct answers against a reviewed reference set |
+| Unsupported claims | Answers containing facts absent from the supplied hospital information |
+| Form completeness | Correctly captured required registration fields |
+| Task completion | Successful registration and appointment workflows |
+| Response time | Time required to generate an answer or complete a task |
+| Usability | Feedback from users completing representative scenarios |
+
+Include English and Thai questions, missing-information cases, unavailable appointment slots, and conflicting requests. Report measured results rather than assuming the graph improves every answer.
